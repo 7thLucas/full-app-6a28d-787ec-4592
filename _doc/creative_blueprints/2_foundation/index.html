@@ -1,0 +1,64 @@
+<style>
+.mode-landscape .sl-layout { flex-direction: row; }
+.mode-portrait .sl-layout { flex-direction: column; }
+.mode-landscape .sl-problem { width: 50%; }
+.mode-landscape .sl-solution { width: 50%; }
+.mode-portrait .sl-problem { width: 100%; flex: 1; }
+.mode-portrait .sl-solution { width: 100%; flex: 1; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Problem side -->
+    <div class="sl-problem flex flex-col justify-center p-12 bg-slate-50">
+      <span class="text-xs font-bold tracking-widest uppercase text-red-500 mb-4">The Problem</span>
+      <h2 class="text-3xl font-bold text-slate-900 leading-snug mb-5">
+        First impressions are made in milliseconds — and most landing pages fail them.
+      </h2>
+      <p class="text-slate-600 text-base leading-relaxed">
+        Overcrowded pages, muddled messaging, and visual noise leave visitors confused before they've read a single word. The brand never lands.
+      </p>
+      <ul class="mt-6 flex flex-col gap-3">
+        <li class="flex items-start gap-3">
+          <span class="mt-1 w-2 h-2 rounded-full bg-red-400 flex-shrink-0"></span>
+          <span class="text-slate-600 text-sm">Too many competing messages</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 w-2 h-2 rounded-full bg-red-400 flex-shrink-0"></span>
+          <span class="text-slate-600 text-sm">Slow load from bloated assets</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 w-2 h-2 rounded-full bg-red-400 flex-shrink-0"></span>
+          <span class="text-slate-600 text-sm">Brand name buried in the noise</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Solution side -->
+    <div class="sl-solution flex flex-col justify-center p-12 bg-indigo-700">
+      <span class="text-xs font-bold tracking-widest uppercase text-indigo-300 mb-4">The Solution</span>
+      <h2 class="text-3xl font-bold text-white leading-snug mb-5">
+        One section. One message. Instant clarity.
+      </h2>
+      <p class="text-indigo-100 text-base leading-relaxed">
+        Hello QuantumByte strips everything back to a single bold welcome — nothing more, nothing less. Clean design, zero distraction, the brand front and center from the very first pixel.
+      </p>
+      <ul class="mt-6 flex flex-col gap-3">
+        <li class="flex items-start gap-3">
+          <span class="mt-1 w-2 h-2 rounded-full bg-indigo-300 flex-shrink-0"></span>
+          <span class="text-indigo-100 text-sm">One clear, confident message</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 w-2 h-2 rounded-full bg-indigo-300 flex-shrink-0"></span>
+          <span class="text-indigo-100 text-sm">Instant load — zero bloat</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 w-2 h-2 rounded-full bg-indigo-300 flex-shrink-0"></span>
+          <span class="text-indigo-100 text-sm">QuantumByte brand unmistakably center stage</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
