@@ -26,15 +26,15 @@ export type TDefaultConfigurableData = {
 };
 
 export const defaultConfigurablesData: TDefaultConfigurableData = {
-  appName: "Hello QuantumByte",
+  appName: "Hello Orias",
   logoUrl: "FILL_LOGO_URL_HERE",
   brandColor: {
     primary: "#6366F1",
     secondary: "#7C3AED",
     accent: "#A78BFA",
   },
-  heroHeading: "Hello QuantumByte",
-  heroSubtitle: "A clean, confident first impression for the QuantumByte brand.",
+  heroHeading: "Hello Orias",
+  heroSubtitle: "A clean, confident first impression for the Orias brand.",
   heroTagline: "Welcome",
   // ─────────────────────────────────────────────────────────────────────
   // Add new field defaults here. See RULES.md §5 for per-type shape.
