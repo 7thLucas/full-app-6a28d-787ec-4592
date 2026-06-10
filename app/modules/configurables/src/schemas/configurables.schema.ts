@@ -71,5 +71,27 @@ export const configurableSchemas: ConfigurableSchemas = {
         },
       ],
     },
+    {
+      fieldName: "heroHeading",
+      type: "string",
+      required: true,
+      label: "Hero Heading",
+      minLength: 1,
+      maxLength: 120,
+    },
+    {
+      fieldName: "heroSubtitle",
+      type: "string",
+      required: false,
+      label: "Hero Subtitle",
+      maxLength: 200,
+    },
+    {
+      fieldName: "heroTagline",
+      type: "string",
+      required: false,
+      label: "Hero Tagline (small label above heading)",
+      maxLength: 80,
+    },
   ],
 };
