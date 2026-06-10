@@ -4,7 +4,7 @@ export default function IndexPage() {
   const { config, loading } = useConfigurables();
 
   // Resolve configurable values with safe fallbacks
-  const heading = loading ? "" : (config.heroHeading ?? "Hello Orias");
+  const heading = loading ? "" : (config.heroHeading ?? "Hello");
   const subtitle = loading ? "" : (config.heroSubtitle ?? "");
   const tagline = loading ? "" : (config.heroTagline ?? "");
   const primary = config?.brandColor?.primary ?? "#6366F1";
