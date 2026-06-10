@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ip7eomrs-4592-development-svc
+  namespace: qb-prototypes
+spec:
+  selector:
+    app: ip7eomrs-4592-development
+  ports:
+  - port: 80
+    targetPort: 3000

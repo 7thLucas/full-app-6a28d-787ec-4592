@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ip7eomrs-4592-development
+  namespace: qb-prototypes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ip7eomrs-4592-development
+  template:
+    metadata:
+      labels:
+        app: ip7eomrs-4592-development
+    spec:
+      imagePullSecrets:
+      - name: qtn-dockerhub
+      containers:
+      - name: web
+        image: quantumteknologi/ip7eomrs-4592-development
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "512Mi"
+          limits:
+            cpu: "2"
+            memory: "2Gi"
+        env:
+        - name: WATCHPACK_POLLING
+          value: "true"
