@@ -1,0 +1,55 @@
+<style>
+.mode-landscape .sl-layout { flex-direction: row; }
+.mode-portrait .sl-layout { flex-direction: column; }
+.mode-landscape .sl-content { width: 55%; }
+.mode-landscape .sl-visual { width: 45%; }
+.mode-portrait .sl-content { width: 100%; flex: 1; }
+.mode-portrait .sl-visual { width: 100%; height: 35%; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Content Column -->
+    <div class="sl-content flex flex-col justify-between p-12">
+      <!-- Tag -->
+      <div>
+        <span class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full">
+          Landing Page
+        </span>
+      </div>
+
+      <!-- Headline block -->
+      <div class="flex flex-col gap-5">
+        <h1 class="text-6xl font-black text-slate-900 leading-tight tracking-tight">
+          Hello,<br/>
+          <span class="text-indigo-600">QuantumByte.</span>
+        </h1>
+        <p class="text-xl text-slate-500 font-light leading-relaxed max-w-xs">
+          One page. One message. A clean, confident welcome to the QuantumByte world.
+        </p>
+        <div class="flex items-center gap-3 mt-2">
+          <span class="w-8 h-0.5 bg-indigo-400 rounded-full"></span>
+          <span class="text-sm text-slate-400 font-medium tracking-wide">Simple by design</span>
+        </div>
+      </div>
+
+      <!-- Attribution -->
+      <div>
+        <data-attribution />
+      </div>
+    </div>
+
+    <!-- Visual Column -->
+    <div class="sl-visual relative overflow-hidden">
+      <img
+        src="http://localhost:8001/common/image-generation?prompt=modern%20dark%20indigo%20violet%20quantum%20digital%20wave%20abstract%20minimal%20tech%20brand%20glowing%20particles"
+        class="w-full h-full object-cover"
+        alt="QuantumByte visual"
+      />
+      <!-- Blend edge -->
+      <div class="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white to-transparent"></div>
+    </div>
+
+  </div>
+</section>
