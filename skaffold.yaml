@@ -1,33 +1,33 @@
-apiVersion: skaffold/v4beta7
+apiVersion: skaffold/v4beta14
 kind: Config
 build:
-  tagPolicy:
-    customTemplate:
-      template: "latest"
   local:
     push: true
-    useBuildkit: true
-    concurrency: 0
+  tagPolicy:
+    envTemplate:
+      template: "latest"
   artifacts:
-  - image: quantumteknologi/ip7eomrs-4592-development
+  - image: quantumteknologi/qb-remix-base
     context: .
-    docker:
-      dockerfile: Dockerfile.dev
-      cliFlags:
-        - "--cache-from=quantumteknologi/ip7eomrs-4592-development:latest"
-        - "--build-arg=BUILDKIT_INLINE_CACHE=1"
+    custom:
+      buildCommand: "docker inspect quantumteknologi/qb-remix-base:latest > /dev/null"
+      dependencies:
+        paths:
+          - '**/*'
+          - '.env'
+        ignore:
+          - '.git/**'
+          - 'k8s/**'
+          - 'skaffold.yaml'
+          - 'node_modules/**'
+          - '.skaffold/**'
     sync:
-      infer:
-        - 'app/**/*'
-        - 'src/**/*'
-        - 'public/**/*'
-        - 'components/**/*'
-        - '*.ts'
-        - '*.js'
-        - 'tsconfig.json'
-        - '*.css'
-        - '*.json'
-        - '*.html'
+      manual:
+        - src: '**/*'
+          dest: '/app'
+        - src: '.env'
+          dest: '/app'
+
 manifests:
   rawYaml:
     - k8s/*.yaml

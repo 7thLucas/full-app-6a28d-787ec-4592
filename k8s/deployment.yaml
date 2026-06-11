@@ -17,8 +17,9 @@ spec:
       - name: qtn-dockerhub
       containers:
       - name: web
-        image: quantumteknologi/ip7eomrs-4592-development
+        image: quantumteknologi/qb-remix-base:latest
         imagePullPolicy: IfNotPresent
+        command: ["/usr/local/bin/entrypoint.sh"]
         ports:
         - containerPort: 3000
         resources:
@@ -28,6 +29,9 @@ spec:
           limits:
             cpu: "2"
             memory: "2Gi"
-        env:
-        - name: WATCHPACK_POLLING
-          value: "true"
+        volumeMounts:
+        - name: app-source
+          mountPath: /app
+      volumes:
+      - name: app-source
+        emptyDir: {}
