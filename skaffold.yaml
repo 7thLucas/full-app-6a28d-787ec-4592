@@ -5,12 +5,13 @@ build:
     push: true
   tagPolicy:
     envTemplate:
-      template: "12-06-2026"
+      template: "12-06-2026-ip7eomrs-4592-development"
   artifacts:
   - image: quantumteknologi/qb-remix-base
     context: .
     custom:
-      buildCommand: "docker inspect quantumteknologi/qb-remix-base:12-06-2026 > /dev/null"
+      buildCommand: |
+        docker inspect quantumteknologi/qb-remix-base:12-06-2026 > /dev/null && docker tag quantumteknologi/qb-remix-base:12-06-2026 $IMAGE && ( [ "$PUSH_IMAGE" != "true" ] || docker push $IMAGE )
       dependencies:
         paths:
           - '**/*'

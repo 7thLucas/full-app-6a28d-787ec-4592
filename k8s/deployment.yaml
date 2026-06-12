@@ -17,7 +17,7 @@ spec:
       - name: qtn-dockerhub
       containers:
       - name: web
-        image: quantumteknologi/qb-remix-base:12-06-2026
+        image: quantumteknologi/qb-remix-base:12-06-2026-ip7eomrs-4592-development
         imagePullPolicy: IfNotPresent
         command: ["/usr/local/bin/entrypoint.sh"]
         ports:
